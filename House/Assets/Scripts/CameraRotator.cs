@@ -8,6 +8,7 @@ public class CameraRotator : MonoBehaviour
     [SerializeField] private float _sensitivityZoom;
     [SerializeField] private float _zoomMax;
     [SerializeField] private float _zoomMin;
+    [SerializeField] private float _limitY;
 
     private void Awake()
     {
@@ -30,6 +31,7 @@ public class CameraRotator : MonoBehaviour
 
         var X = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * _sensitivityRotation;
         var Y = Input.GetAxis("Mouse Y") * _sensitivityRotation;
+        Y = Mathf.Clamp (Y, -_limitY, _limitY);
         transform.localEulerAngles = new Vector3(-Y, X, 0);
         transform.position = transform.localRotation * _offset + _target.position;
     }
