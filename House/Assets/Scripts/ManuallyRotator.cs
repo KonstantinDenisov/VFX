@@ -17,5 +17,9 @@ public class ManuallyRotator : MonoBehaviour
             {
                 _transform.Rotate(0, _sensitivityRotation * Time.deltaTime * -1, 0);
             }
+
+            if (Input.GetKeyUp(KeyCode.LeftArrow))
+            {
+            }
         }
     }
