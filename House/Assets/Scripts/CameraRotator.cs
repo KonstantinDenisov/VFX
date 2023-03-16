@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 
 public class CameraRotator : MonoBehaviour
@@ -34,5 +35,6 @@ public class CameraRotator : MonoBehaviour
         Y = Mathf.Clamp (Y, -_limitY, _limitY);
         transform.localEulerAngles = new Vector3(-Y, X, 0);
         transform.position = transform.localRotation * _offset + _target.position;
+        
     }
 }
