@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-public class Rotator : MonoBehaviour
+public class ManuallyRotator : MonoBehaviour
     {
         [SerializeField] private float _sensitivityRotation;
         [SerializeField] private Transform _transform;

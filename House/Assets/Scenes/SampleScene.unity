@@ -408,6 +408,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1628150939}
   - component: {fileID: 1628150938}
+  - component: {fileID: 1628150940}
   m_Layer: 0
   m_Name: Rotator
   m_TagString: Untagged
@@ -422,7 +423,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1628150937}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1c6725bfee9449399158f9a5dd76f9e8, type: 3}
   m_Name: 
@@ -445,3 +446,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1628150940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628150937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9539a6f6df25f1d48a0248541cbb20af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speedRotation: 1000000
+  _timeCycle: 0
+  _transform: {fileID: 1628150939}
