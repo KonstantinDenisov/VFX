@@ -8,10 +8,15 @@ public class AutomaticRotator : MonoBehaviour
     [SerializeField] private Transform _transform;
     private Vector3 _vector3;
 
-    private void Start()
+    public void StartDOTween()
     {
         _vector3 = new Vector3(0, _speedRotation * Time.deltaTime * -1, 0);
-        
         _transform.DORotate(_vector3, _timeCycle , RotateMode.FastBeyond360).SetLoops (-1, LoopType.Incremental);
     }
+
+    public void StopDOTween()
+    {
+        _transform.DOKill();
+    }
+    
 }

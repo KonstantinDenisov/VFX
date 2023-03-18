@@ -18,11 +18,11 @@ public class UIController : MonoBehaviour
 
     private void ManuallyModeActive()
     {
-        
+        _automaticRotator.StopDOTween();
     }
 
     private void AutomaticModeActive()
     {
-        
+        _automaticRotator.StartDOTween();
     }
 }
