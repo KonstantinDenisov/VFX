@@ -10,8 +10,8 @@ public class AutomaticRotator : MonoBehaviour
 
     public void StartDOTween()
     {
-        _vector3 = new Vector3(0, _speedRotation * Time.deltaTime * -1, 0);
-        _transform.DORotate(_vector3, _timeCycle , RotateMode.FastBeyond360).SetLoops (-1, LoopType.Incremental);
+        _vector3 = new Vector3(0, _speedRotation, 0);
+        _transform.DORotate(_vector3, _timeCycle , RotateMode.LocalAxisAdd).SetLoops (-1, LoopType.Restart);
     }
 
     public void StopDOTween()
