@@ -3,8 +3,8 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
-    [SerializeField] private GameObject _automaticRotator;
-    [SerializeField] private GameObject _manuallyRotator;
+    [SerializeField] private AutomaticRotator _automaticRotator;
+    [SerializeField] private ManuallyRotator _manuallyRotator;
     
     [Header("Buttons")]
     [SerializeField] private Button _buttonAutomatic;
@@ -18,13 +18,11 @@ public class UIController : MonoBehaviour
 
     private void ManuallyModeActive()
     {
-        _automaticRotator.SetActive(false);
-        _manuallyRotator.SetActive(true);
+        
     }
 
     private void AutomaticModeActive()
     {
-        _automaticRotator.SetActive(true);
-        _manuallyRotator.SetActive(false);
+        
     }
 }
