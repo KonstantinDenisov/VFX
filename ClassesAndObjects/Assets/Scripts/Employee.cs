@@ -63,4 +63,10 @@ public class Employee : Human
         base.PrintInformation();
         Console.WriteLine($"Organization - {_organization}, Salary - {_salary}, Experience - {_experience}");
     }
+    
+    public string Information()
+    {
+        string information = $"Organization - {_organization}, Salary - {_salary}, Experience - {_experience}";
+        return information;
+    }
 }

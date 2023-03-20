@@ -378,6 +378,7 @@
 "Assets/Scripts/Employee.cs"
 "Assets/Scripts/Human.cs"
 "Assets/Scripts/Student.cs"
+"Assets/Scripts/UIService.cs"
 -langversion:9.0
 
 /deterministic
