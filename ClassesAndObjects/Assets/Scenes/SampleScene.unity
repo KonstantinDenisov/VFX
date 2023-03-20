@@ -3502,7 +3502,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 50.00006}
+  m_AnchoredPosition: {x: 0, y: 50}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1362873630
@@ -3690,6 +3690,7 @@ GameObject:
   - component: {fileID: 1564775097}
   - component: {fileID: 1564775096}
   - component: {fileID: 1564775095}
+  - component: {fileID: 1564775099}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -3781,6 +3782,36 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1564775099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564775094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ae816174dcd7e044b9538290d74a611, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _consoleCreateMenu: {fileID: 807687987}
+  _consoleStartMenu: {fileID: 512120888}
+  _consoleDeleteMenu: {fileID: 835778107}
+  _startMenu: {fileID: 1909213764}
+  _createMenu: {fileID: 309630324}
+  _deleteMenu: {fileID: 286556663}
+  _organization: {fileID: 326387541}
+  _salary: {fileID: 1592374356}
+  _experience: {fileID: 1092486128}
+  _deleteIndex: {fileID: 19259355}
+  _buttonEnterToCreateMenu: {fileID: 1361201532}
+  _enterToDeleteMenuButton: {fileID: 300832659}
+  _writeInformationButton: {fileID: 667999321}
+  _createEmployeeButton: {fileID: 22791832}
+  _backToStartMenuCreateMenuButton: {fileID: 2067840972}
+  _deleteCurrentEmployeeButton: {fileID: 687743831}
+  _deleteAllEmployeeButton: {fileID: 1728003724}
+  _backToStartMenuDeleteMenu: {fileID: 1013513985}
 --- !u!1 &1592374354
 GameObject:
   m_ObjectHideFlags: 0
