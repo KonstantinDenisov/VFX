@@ -1,12 +1,13 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ManuallyRotator : MonoBehaviour
     {
         [SerializeField] private float _sensitivityRotation;
         [SerializeField] private Transform _transform;
         private float _currentSpeed;
-        private bool _left;
+        private bool _isLeft;
+        private bool _isPressed;
+        private int _direction;
 
         private void Start()
         {
@@ -15,41 +16,39 @@ public class ManuallyRotator : MonoBehaviour
 
         private void Update()
         {
+            UpdateButtonsState();
+            Rotate();
+        }
+
+        private void UpdateButtonsState()
+        {
+            if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
+                _isPressed = true;
+
+            if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow))
+                _isPressed = false;
+
             if (Input.GetKey(KeyCode.LeftArrow))
             {
-                _currentSpeed = Mathf.Lerp(_currentSpeed, _sensitivityRotation, Time.deltaTime);
-                _transform.Rotate(0, _currentSpeed * Time.deltaTime, 0);
+                _isLeft = true;
+                _direction = 1;
             }
 
-            if (Input.GetKeyUp(KeyCode.LeftArrow))
+            if (Input.GetKey(KeyCode.RightArrow))
             {
-                _left = true;
+                _isLeft = false;
+                _direction = -1;
             }
-        
-            else if (Input.GetKey(KeyCode.RightArrow))
-            {
-                _currentSpeed = Mathf.Lerp(_currentSpeed, _sensitivityRotation, Time.deltaTime);
-                _transform.Rotate(0, _currentSpeed * Time.deltaTime * -1, 0);
-            }
+        }
 
-            if (Input.GetKeyUp(KeyCode.RightArrow))
-            {
-                _left = false;
-            }
+        private void Rotate()
+        {
+            if (_isPressed)
+                _currentSpeed = _sensitivityRotation;
 
             else
-            {
-                if (_left)
-                {
-                    _currentSpeed = Mathf.Lerp(_currentSpeed, 0, Time.deltaTime);
-                    _transform.Rotate(0, _currentSpeed * Time.deltaTime, 0);
-                }
-                else
-                {
-                    _currentSpeed = Mathf.Lerp(_currentSpeed, 0, Time.deltaTime);
-                    _transform.Rotate(0, _currentSpeed * Time.deltaTime * -1, 0);
-                }
-                
-            }
+                _currentSpeed = Mathf.Lerp(_currentSpeed, 0, Time.deltaTime);
+
+            _transform.Rotate(0, _currentSpeed * Time.deltaTime * _direction, 0);
         }
     }
