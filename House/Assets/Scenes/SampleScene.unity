@@ -3049,7 +3049,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speedRotation: 360
-  _timeCycle: 1
+  _timeCycle: 30
   _transform: {fileID: 1628150939}
 --- !u!4 &1915488489
 Transform:
