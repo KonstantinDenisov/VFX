@@ -22,11 +22,7 @@ public class ManuallyRotator : MonoBehaviour
 
         private void UpdateButtonsState()
         {
-            if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
-                _isPressed = true;
-
-            if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow))
-                _isPressed = false;
+            _isPressed = Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow);
 
             if (Input.GetKey(KeyCode.LeftArrow))
             {
