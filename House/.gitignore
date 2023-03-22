@@ -1,0 +1,27 @@
+Library/
+Temp/
+obj/
+Logs/
+
+*.csproj
+*.sln
+
+.idea
+Assets/Plugins/Editor/JetBrains/
+*.sln.DotSettings.user
+
+ProjectSettings/Packages/com.furylion.*
+
+fastlane/README.md
+fastlane/report.xml
+Assets/Temp.meta
+Assets/VFX/Temp.meta
+
+.DS_Store
+ServerData
+UserSettings/
+
+# Generator
+Generator/Generator/bin
+!/Generator/*.sln
+!/Generator/Generator/*.csproj
