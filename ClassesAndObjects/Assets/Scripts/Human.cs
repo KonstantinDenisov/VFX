@@ -3,56 +3,64 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Human
+public abstract class Human
 {
-    private string _firstName;
-    private string _lastName;
-    private string _patronymic;
-    private int _dateOfBirth;
-        
+    protected string FirstName;
+    protected string LastName;
+    protected string Patronymic;
+    protected int DateOfBirth;
 
     public string GetFirstName()
     {
-        return _firstName;
+        return FirstName;
     }
 
     public void SetFirstName(string firstName)
     {
-        _firstName = firstName;
+        FirstName = firstName;
     }
+
     public string GetLastName()
     {
-        return _lastName;
+        return LastName;
     }
 
     public void SetLastName(string lastName)
     {
-        _lastName = lastName;
+        LastName = lastName;
     }
-        
+
     public string GetPatronymic()
     {
-        return _patronymic;
+        return Patronymic;
     }
 
     public void SetPatronymic(string patronymic)
     {
-        _patronymic = patronymic;
+        Patronymic = patronymic;
     }
-        
+
     public int GetDateOfBirth()
     {
-        return _dateOfBirth;
+        return DateOfBirth;
     }
 
     public void SetDateOfBirth(int dateOfBirth)
     {
-        _dateOfBirth = dateOfBirth;
+        DateOfBirth = dateOfBirth;
     }
 
     public virtual void PrintInformation()
     {
-        Console.WriteLine($"First Name - {_firstName}, Last Name - {_lastName}, Patronymic - {_patronymic}," +
-            $"Date of birth - {_dateOfBirth}");
+        Console.WriteLine($"First Name - {FirstName}, Last Name - {LastName}, Patronymic - {Patronymic}," +
+            $"Date of birth - {DateOfBirth}");
+    }
+
+    public virtual string Information()
+    {
+        string info;
+        info = ($"First Name - {FirstName}, Last Name - {LastName}, Patronymic - {Patronymic}," +
+            $"Date of birth - {DateOfBirth}");
+        return info;
     }
 }
