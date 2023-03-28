@@ -74,6 +74,7 @@ public class UIService : MonoBehaviour
     private void DeleteCurrentEmployee()
     {
         int index = Convert.ToInt32(_deleteIndex.text);
+        index--;
         WriteDeleteInformation(_employers[index].GetFirstName());
         _employers.RemoveAt(index);
         ClearDeleteInputField();
@@ -88,7 +89,6 @@ public class UIService : MonoBehaviour
 
     private void CreateEmployeeButton()
     {
-        
         _employers.Add(new Employee(_organization.text, Convert.ToInt32(_salary.text),
             Convert.ToInt32(_experience.text), _firstName.text, _lastName.text, _patronymic.text
             , Convert.ToInt32(_dateOfBirth.text)));
