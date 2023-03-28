@@ -77,7 +77,7 @@ public class Employee : Human
     {
         string inf;
         inf = base.Information();
-        string information = $"{inf}, Organization - {_organization}, Salary - {_salary}, Experience - {_experience}";
+        string information = $" \n {inf}, Organization - {_organization}, Salary - {_salary}, Experience - {_experience}";
         return information;
     }
 }
