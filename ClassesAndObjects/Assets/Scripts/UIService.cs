@@ -73,9 +73,9 @@ public class UIService : MonoBehaviour
 
     private void DeleteCurrentEmployee()
     {
-        int index = Convert.ToInt32(_deleteIndex.text);
-        index--;
-        WriteDeleteInformation(_employers[index].GetFirstName());
+        int indexUi = Convert.ToInt32(_deleteIndex.text);
+        int index = indexUi - 1;
+        WriteDeleteInformation(_employers[index].GetFirstName(), indexUi);
         _employers.RemoveAt(index);
         ClearDeleteInputField();
     }
@@ -113,9 +113,9 @@ public class UIService : MonoBehaviour
         _consoleStartMenu.text = information;
     }
 
-    private void WriteDeleteInformation(string name)
+    private void WriteDeleteInformation(string name, int index)
     {
-        _consoleDeleteMenu.text = $"Employee {name} was be deleted";
+        _consoleDeleteMenu.text = $"Employee {name} under the index {index} was be deleted";
     }
 
     private void WriteCreateInformation(string name)
