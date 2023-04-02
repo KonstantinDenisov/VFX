@@ -53,7 +53,7 @@ Material:
     m_Floats:
     - _DiatortionAmount: 0.2
     - _DissolveScale: 2
-    - _DissoveAmmount: 1.2
+    - _DissoveAmmount: 0.4
     - _DistortionScale: 5
     - _QueueControl: 0
     - _QueueOffset: 0
