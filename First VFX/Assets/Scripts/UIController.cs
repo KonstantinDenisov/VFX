@@ -5,6 +5,7 @@ public class UIController : MonoBehaviour
 {
     [SerializeField] private Button _play;
     [SerializeField] private Animator _animator;
+    [SerializeField] private ParticleSystem _spell;
     
     private void Awake()
     {
@@ -14,5 +15,6 @@ public class UIController : MonoBehaviour
     private void PlayAnimation()
     {
         _animator.SetTrigger("Spell");
+        _spell.Play();
     }
 }
