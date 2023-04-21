@@ -21,7 +21,10 @@ namespace VFX_2D.Ice
         [SerializeField] private Transform _controlPoint7;
         [SerializeField] private Transform _controlPoint8;
         [SerializeField] private Transform _controlPoint9;
-        
+        [SerializeField] private Vector3 _rotate;
+        [SerializeField] private float _scale;
+        [SerializeField] private float _durationScale;
+        [SerializeField] private float _durationRotate;
         [SerializeField] private Vector3 [] _pathWaypoints;
         [SerializeField] private float _duration;
 
@@ -41,8 +44,16 @@ namespace VFX_2D.Ice
 
         private void PlayerVFX()
         {
+            DOTween.Sequence()
+                .Append(_rocketSpriteRenderer.transform.DOPath(_pathWaypoints, _duration, PathType.CubicBezier)
+                    .SetLookAt(0)).SetEase(Ease.InQuart);
 
-            _rocketSpriteRenderer.transform.DOPath(_pathWaypoints, _duration, PathType.CubicBezier);
+
+            DOTween.Sequence()
+                .Append(_bellSpriteRenderer.transform.DOScale(Vector3.one * _scale, _durationRotate))
+                .SetLoops(3, LoopType.Yoyo)
+                .Append(_bellSpriteRenderer.transform.DORotate(_rotate, _durationRotate, RotateMode.Fast)
+                    .SetLoops(3, LoopType.Yoyo));
 
             /*
             _particleSystem.Stop();

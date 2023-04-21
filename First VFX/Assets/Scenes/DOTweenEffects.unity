@@ -576,7 +576,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1092427515}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 56.61, z: 0}
+  m_LocalPosition: {x: 0, y: 59, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -887,6 +887,10 @@ MonoBehaviour:
   _controlPoint7: {fileID: 1884018765}
   _controlPoint8: {fileID: 1356200567}
   _controlPoint9: {fileID: 1846760426}
+  _rotate: {x: 0, y: 0, z: 45}
+  _scale: 0.6
+  _durationScale: 0.1
+  _durationRotate: 0.1
   _pathWaypoints: []
   _duration: 4
 --- !u!1 &1643419624
