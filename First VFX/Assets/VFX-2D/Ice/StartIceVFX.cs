@@ -8,7 +8,7 @@ namespace VFX_2D.Ice
     public class StartIceVFX : MonoBehaviour
     {
         [SerializeField] private ParticleSystem _particleSystem;
-        
+        [SerializeField] private ParticleSystem _boom;
         [SerializeField] private Button _button;
         [SerializeField] private SpriteRenderer _rocketSpriteRenderer;
         [SerializeField] private SpriteRenderer _bellSpriteRenderer;
@@ -46,28 +46,17 @@ namespace VFX_2D.Ice
         {
             DOTween.Sequence()
                 .Append(_rocketSpriteRenderer.transform.DOPath(_pathWaypoints, _duration, PathType.CubicBezier)
-                    .SetLookAt(0)).SetEase(Ease.InQuart);
-
-
-            DOTween.Sequence()
-                .Append(_bellSpriteRenderer.transform.DOScale(Vector3.one * _scale, _durationRotate))
-                .SetLoops(3, LoopType.Yoyo)
-                .Append(_bellSpriteRenderer.transform.DORotate(_rotate, _durationRotate, RotateMode.Fast)
-                    .SetLoops(3, LoopType.Yoyo));
-
-            /*
-            _particleSystem.Stop();
-            _particleSystem.Clear();
-            
-            _rocketSpriteRenderer.DOFade(0f, 0f);
-            _rocketSpriteRenderer.transform.localScale = Vector3.one * 1.5f;
-
-            DOTween.Sequence()
-                .AppendCallback(_particleSystem.Play)
-                .Append(_rocketSpriteRenderer.DOFade(1f, _appearanceTime).SetEase(Ease.InSine))
-                .Join(_rocketSpriteRenderer.transform.DOScale(Vector3.one * 2, 0.6f).SetEase(Ease.OutBack))
-                .SetDelay(0.4f);
-                */
+                    .SetLookAt(Vector3.down)
+                    .SetEase(Ease.InQuart)
+                    .OnStart(_particleSystem.Play)
+                    .OnComplete(_boom.Play))
+                .Append(_bellSpriteRenderer.transform.DOScale(Vector3.zero, 0.25f))
+                .Join(_bellSpriteRenderer.transform.DOScale(Vector3.one * _scale, _durationRotate))
+                    .SetLoops(3, LoopType.Yoyo)
+                .Join(_bellSpriteRenderer.transform.DORotate(_rotate, _durationRotate))
+                .Append(_bellSpriteRenderer.transform.DORotate(-_rotate, _durationRotate))
+                .Append(_bellSpriteRenderer.transform.DORotate(_rotate, _durationRotate))
+                .Append(_bellSpriteRenderer.transform.DORotate(-_rotate, _durationRotate));
         }
     }
 }
