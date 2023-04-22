@@ -51,13 +51,20 @@ namespace VFX_2D.Ice
                     .OnStart(_particleSystem.Play)
                     .OnComplete(_boom.Play))
                 .AppendCallback(_particleSystem.Clear)
+                .AppendCallback(_particleSystem.Stop)
                 .Append(_rocketSpriteRenderer.transform.DOScale(Vector3.zero, 0.25f))
-                .Join(_bellSpriteRenderer.transform.DOScale(Vector3.one * _scale, _durationRotate)
-                    .SetLoops(3, LoopType.Yoyo))
-                .Join(_bellSpriteRenderer.transform.DORotate(_rotate, _durationRotate))
-                .Append(_bellSpriteRenderer.transform.DORotate(-_rotate, _durationRotate))
-                .Append(_bellSpriteRenderer.transform.DORotate(_rotate, _durationRotate))
-                .Append(_bellSpriteRenderer.transform.DORotate(-_rotate, _durationRotate));
+                .Join(_bellSpriteRenderer.transform.DOScale(Vector3.one * _scale * 2, _durationScale * 2))
+                .Join(_bellSpriteRenderer.transform.DORotate(_rotate * 3, _durationRotate * 2))
+                    .SetEase(Ease.OutQuad)
+                .Append(_bellSpriteRenderer.transform.DOScale(Vector3.one * _scale * 1.5f, _durationScale * 3))
+                .Join(_bellSpriteRenderer.transform.DORotate(-_rotate * 2, _durationRotate * 3))
+                    .SetEase(Ease.InFlash)
+                .Append(_bellSpriteRenderer.transform.DOScale(Vector3.one * _scale, _durationScale * 4))
+                .Join(_bellSpriteRenderer.transform.DORotate(_rotate, _durationRotate * 4))
+                    .SetEase(Ease.InElastic)
+                .Append(_bellSpriteRenderer.transform.DOScale(Vector3.one * 0.5f, _durationScale * 5))
+                .Join(_bellSpriteRenderer.transform.DORotate(Vector3.one, _durationRotate * 5))
+                    .SetEase(Ease.InQuart);
         }
     }
 }
