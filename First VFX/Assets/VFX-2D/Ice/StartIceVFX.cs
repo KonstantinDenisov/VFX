@@ -61,7 +61,7 @@ namespace VFX_2D.Ice
                 })
                 .Append(_rocketSpriteRenderer.transform.DOPath(_pathWaypoints, _duration, PathType.CubicBezier)
                     .SetLookAt(0, Vector3.right, Vector3.forward)
-                    .SetEase(Ease.InOutQuad)
+                    .SetEase(Ease.InCubic)
                     .OnStart(_particleSystem.Play)
                     .OnComplete(() =>
                     {
@@ -76,12 +76,12 @@ namespace VFX_2D.Ice
         private void BellAnimation()
         {
             DOTween.Sequence()
-                .AppendInterval(0.2f)
-                .Append(_bellSpriteRenderer.transform.DOScale(new Vector3(1.2f, 0.8f, 1), _durationScale * 2)
+                .AppendInterval(0.3f)
+                .Append(_bellSpriteRenderer.transform.DOScale(new Vector3(1.2f, 0.8f, 1) * 0.5f, _durationScale * 2)
                     .SetEase(Ease.InOutQuad))
                 .Join(_bellSpriteRenderer.transform.DORotate(Vector3.zero + new Vector3(0, 0, -25), 0.17f)
                     .SetEase(Ease.OutQuad))
-                .Append(_bellSpriteRenderer.transform.DOScale(new Vector3(0.9f, 1.1f, 1),
+                .Append(_bellSpriteRenderer.transform.DOScale(new Vector3(0.9f, 1.1f, 1) * 0.5f ,
                         0.26f)
                     .SetEase(Ease.OutQuad))
                 .Join(_bellSpriteRenderer.transform.DORotate(Vector3.zero + new Vector3(0, 0, 25), 0.23f)
