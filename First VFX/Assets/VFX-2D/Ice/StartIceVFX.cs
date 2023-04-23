@@ -50,35 +50,46 @@ namespace VFX_2D.Ice
         private void PlayerVFX()
         {
             DOTween.Sequence()
-                .Append(_rocketSpriteRenderer.transform.DOPath(_pathWaypoints, _duration, PathType.CubicBezier)
-                    .SetLookAt(0, Vector3.right, Vector3.forward)
-                    .SetEase(Ease.InQuart)
-                    .OnStart(_particleSystem.Play)
-                    .OnComplete(_boom.Play))
-                .AppendCallback(() =>
-                {
-                    _particleSystem.Clear();
-                    _particleSystem.Stop();
-                })
-                .Append(_rocketSpriteRenderer.transform.DOScale(Vector3.zero, 0.25f))
-                .Join(_bellSpriteRenderer.transform.DOScale(new Vector3(1 * _scale * 2, 1, 1), _durationScale * 2))
-                .Join(_bellSpriteRenderer.transform.DORotate(_rotate * 3, _durationRotate * 2))
-                    .SetEase(Ease.OutQuad)
-                .Append(_bellSpriteRenderer.transform.DOScale(new Vector3(0.5f, 1 * _scale * 1.5f, 1), _durationScale * 3))
-                .Join(_bellSpriteRenderer.transform.DORotate(-_rotate * 2, _durationRotate * 3))
-                    .SetEase(Ease.InFlash)
-                .Append(_bellSpriteRenderer.transform.DOScale(Vector3.one * _scale, _durationScale * 4))
-                .Join(_bellSpriteRenderer.transform.DORotate(_rotate, _durationRotate * 4))
-                    .SetEase(Ease.InElastic)
-                .Append(_bellSpriteRenderer.transform.DOScale(_scaleBell, _durationScale * 5))
-                .Join(_bellSpriteRenderer.transform.DORotate(Vector3.one, _durationRotate * 5))
-                    .SetEase(Ease.InQuart)
                 .AppendCallback(() =>
                 {
                     _rocketSpriteRenderer.transform.position = _startPosition;
                     _rocketSpriteRenderer.transform.DOScale(Vector3.one * 0.4f, 0f);
                     _rocketSpriteRenderer.transform.DORotate(Vector3.zero, 0f);
-                });
+                })
+                .Append(_rocketSpriteRenderer.transform.DOPath(_pathWaypoints, _duration, PathType.CubicBezier)
+                    .SetLookAt(0, Vector3.right, Vector3.forward)
+                    .SetEase(Ease.InSine)
+                    .OnStart(_particleSystem.Play)
+                    .OnComplete(() =>
+                    {
+                        _boom.Play();
+                        _particleSystem.Clear();
+                        _particleSystem.Stop();
+                        
+                        BellAnimation();
+                    }));
+        }
+
+        private void BellAnimation()
+        {
+            DOTween.Sequence()
+                .Append(_bellSpriteRenderer.transform.DOScale(new Vector3(1 * _scale * 2, 1, 1), _durationScale * 2)
+                    .SetEase(Ease.OutQuad))
+                .Join(_bellSpriteRenderer.transform.DORotate(_rotate * 3, _durationRotate * 2)
+                    .SetEase(Ease.OutQuad))
+                .Append(_bellSpriteRenderer.transform.DOScale(new Vector3(0.5f, 1 * _scale * 1.5f, 1),
+                    _durationScale * 3)
+                    .SetEase(Ease.OutQuad))
+                .Join(_bellSpriteRenderer.transform.DORotate(Vector3.one, _durationRotate * 3)
+                    .SetEase(Ease.InFlash))
+                .Append(_bellSpriteRenderer.transform.DOScale(Vector3.one * _scale, _durationScale * 4)
+                    .SetEase(Ease.InElastic))
+                .Join(_bellSpriteRenderer.transform.DORotate(_rotate, _durationRotate * 4)
+                    .SetEase(Ease.OutQuad))
+                .Append(_bellSpriteRenderer.transform.DOScale(_scaleBell, _durationScale * 5)
+                    .SetEase(Ease.OutQuad))
+                .Join(_bellSpriteRenderer.transform.DORotate(Vector3.one, _durationRotate * 5)
+                    .SetEase(Ease.InQuart));
         }
     }
 }
