@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: MaterialForCustomShader1
-  m_Shader: {fileID: 4800000, guid: a6734f2cfa30fe5438c782f98c5e4475, type: 3}
+  m_Shader: {fileID: 4800000, guid: feb89d30162c950419e395f97e36e05e, type: 3}
   m_ValidKeywords:
   - _USECUSTOMDATA_ON
   - _USEFREFESNEL_ON
@@ -70,7 +70,7 @@ Material:
     m_Floats:
     - _AlphaCutoff: 0.5
     - _Cutoff: 0.5
-    - _Emission: 2
+    - _Emission: 4
     - _EnableExternalAlpha: 0
     - _Float1: 2
     - _Fresnel: 1
