@@ -70,7 +70,7 @@ Material:
     m_Floats:
     - _AlphaCutoff: 0.5
     - _Cutoff: 0.5
-    - _Emission: 2
+    - _Emission: 5
     - _EnableExternalAlpha: 0
     - _Float1: 2
     - _Fresnel: 1
@@ -93,5 +93,5 @@ Material:
     - _MainColor: {r: 1, g: 1, b: 1, a: 0}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
     - _SpeedMainTexUVnoise: {r: 0, g: 0, b: 0, a: 0}
-    - _SpeedNoise: {r: 1.2, g: 0, b: 0, a: 0}
+    - _SpeedNoise: {r: 1.5, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

@@ -70,7 +70,7 @@ Material:
     m_Floats:
     - _AlphaCutoff: 0.5
     - _Cutoff: 0.5
-    - _Emission: 4
+    - _Emission: 2
     - _EnableExternalAlpha: 0
     - _Float1: 2
     - _Fresnel: 1
