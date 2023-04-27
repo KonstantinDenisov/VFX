@@ -14998,7 +14998,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 1, g: 1, b: 1, a: 0.627451}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -16147,7 +16147,7 @@ ParticleSystem:
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
         ctime0: 0
-        ctime1: 59039
+        ctime1: 49103
         ctime2: 65535
         ctime3: 0
         ctime4: 0
@@ -16155,7 +16155,7 @@ ParticleSystem:
         ctime6: 0
         ctime7: 0
         atime0: 0
-        atime1: 58982
+        atime1: 49151
         atime2: 65535
         atime3: 0
         atime4: 0
@@ -35611,7 +35611,7 @@ ParticleSystem:
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 0.9438149
+          time: 0.8591896
           value: 1
           inSlope: 0
           outSlope: 0
@@ -35673,7 +35673,7 @@ ParticleSystem:
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 0.13049978
+          time: 0.13049898
           value: 1
           inSlope: 0
           outSlope: 0
@@ -35682,7 +35682,7 @@ ParticleSystem:
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 0.9438149
+          time: 0.8591896
           value: 1
           inSlope: 0
           outSlope: 0
@@ -50543,7 +50543,7 @@ ParticleSystem:
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 0.9438149
+          time: 0.8591896
           value: 1
           inSlope: 0
           outSlope: 0
@@ -50605,7 +50605,7 @@ ParticleSystem:
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 0.13049978
+          time: 0.13049898
           value: 1
           inSlope: 0
           outSlope: 0
@@ -50614,7 +50614,7 @@ ParticleSystem:
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 0.9438149
+          time: 0.8591896
           value: 1
           inSlope: 0
           outSlope: 0
@@ -55561,7 +55561,7 @@ ParticleSystem:
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 0.9438149
+          time: 0.8591896
           value: 1
           inSlope: 0
           outSlope: 0
@@ -55623,7 +55623,7 @@ ParticleSystem:
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 0.13049978
+          time: 0.13049898
           value: 1
           inSlope: 0
           outSlope: 0
@@ -55632,7 +55632,7 @@ ParticleSystem:
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 0.9438149
+          time: 0.8591896
           value: 1
           inSlope: 0
           outSlope: 0
