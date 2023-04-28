@@ -36,6 +36,7 @@ public class ProjectileEffect : MonoBehaviour
                 _animatorEnemy.SetTrigger("Spell"); 
                 _boom.Play();
             })
+            .SetEase(Ease.InSine)
             .SetDelay(_delay);
     }
 }
