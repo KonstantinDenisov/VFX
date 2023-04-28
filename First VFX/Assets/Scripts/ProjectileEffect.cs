@@ -10,6 +10,8 @@ public class ProjectileEffect : MonoBehaviour
     [SerializeField] private Animator _animatorPlayer;
     [SerializeField] private Animator _animatorEnemy;
     [SerializeField] private ParticleSystem _spell;
+    [SerializeField] private ParticleSystem _energize;
+    [SerializeField] private ParticleSystem _boom;
     [SerializeField] private Transform _finish;
     [SerializeField] private float _time;
     [SerializeField] private float _delay;
@@ -18,20 +20,21 @@ public class ProjectileEffect : MonoBehaviour
     private void Awake()
     {
         _play.onClick.AddListener(PlayAnimation);
-        _spell.transform.position = _startPosition;
+        _startPosition = _spell.transform.position; 
     }
 
     private void PlayAnimation()
     {
+        _spell.transform.DOMove(_startPosition, 0);
+        _spell.Play();
+        _energize.Play();
+        _animatorPlayer.SetTrigger("Spell");
+        
         _spell.transform.DOMove(_finish.position, _time)
-            .OnStart(() =>
-            {
-                _spell.Play();
-                _animatorPlayer.SetTrigger("Spell");
-            })
             .OnComplete(() =>
             {
                 _animatorEnemy.SetTrigger("Spell"); 
+                _boom.Play();
             })
             .SetDelay(_delay);
     }
