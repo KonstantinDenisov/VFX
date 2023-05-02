@@ -10,6 +10,7 @@ public class PlayBoom : MonoBehaviour
     [SerializeField] private float _duration;
     [SerializeField] private float _magnitude;
     [SerializeField] private Camera _camera;
+    [SerializeField] private float _delay;
 
     private void Awake()
     {
@@ -18,12 +19,13 @@ public class PlayBoom : MonoBehaviour
 
     private void PlayExplosionEffect()
     {
-        // _spell.Play();
+        _spell.Play();
         StartCoroutine(Shake(_duration, _magnitude));
     }
     
     public IEnumerator Shake (float duration, float magnitude)
     {
+        yield return new WaitForSeconds(_delay);
         Vector3 originalPos = _camera.transform.position;
 
         float elapsed = 0.0f;
