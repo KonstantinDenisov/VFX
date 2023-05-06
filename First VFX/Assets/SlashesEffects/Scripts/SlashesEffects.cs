@@ -18,7 +18,7 @@ public class SlashesEffects : MonoBehaviour
     private void Play()
     {
         _animator.SetTrigger("Spell");
-        _animatorClaw.SetTrigger("Spell");
-       // _spell.Play();
+        _animatorClaw.SetTrigger("Spell"); 
+        _spell.Play();
     }
 }
