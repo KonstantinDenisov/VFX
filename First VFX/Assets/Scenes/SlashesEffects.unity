@@ -149,7 +149,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 258857098}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.300001, y: 0, z: -5.5}
+  m_LocalPosition: {x: -6.300001, y: 0, z: -20.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -418,7 +418,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 0.285713, b: 0, a: 1}
+      maxColor: {r: 0, g: 0.021330357, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -5090,11 +5090,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f481d1350ab3d9a46ac6e413e294016c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -26.1
+      value: -17.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f481d1350ab3d9a46ac6e413e294016c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 111.2
+      value: 118.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f481d1350ab3d9a46ac6e413e294016c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -24771,7 +24771,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1466939629}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!199 &859840785
 ParticleSystemRenderer:
@@ -25035,7 +25035,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 0.285713, b: 0, a: 1}
+      maxColor: {r: 0.011263847, g: 0, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -73682,13 +73682,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1466939626}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -22.4, y: -20.1, z: 96.8}
+  m_LocalPosition: {x: -22.4, y: -11.9, z: 104.40001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 590373388}
-  - {fileID: 859840784}
   - {fileID: 1522549792}
+  - {fileID: 859840784}
   - {fileID: 258857099}
   - {fileID: 1737744746}
   m_Father: {fileID: 0}
@@ -78499,7 +78499,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1486151495}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 17.2, y: -16.9, z: 95.6}
+  m_LocalPosition: {x: 17.2, y: -8.699999, z: 103.200005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -78550,7 +78550,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1466939629}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!199 &1522549793
 ParticleSystemRenderer:
@@ -80359,17 +80359,17 @@ ParticleSystem:
         - serializedVersion: 3
           time: 0
           value: 1
-          inSlope: 0
-          outSlope: 0
+          inSlope: -2
+          outSlope: -2
           tangentMode: 0
           weightedMode: 0
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
           time: 1
-          value: 0.19607544
-          inSlope: -2
-          outSlope: -2
+          value: 0.4862671
+          inSlope: 0
+          outSlope: 0
           tangentMode: 0
           weightedMode: 0
           inWeight: 0
@@ -83620,7 +83620,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1737744745}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.300001, y: 0, z: -5.5}
+  m_LocalPosition: {x: -6.300001, y: 0, z: -20.900002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -83675,7 +83675,7 @@ ParticleSystemRenderer:
   m_MinParticleSize: 0
   m_MaxParticleSize: 0.5
   m_CameraVelocityScale: 0
-  m_VelocityScale: 0
+  m_VelocityScale: 0.4
   m_LengthScale: 5
   m_SortingFudge: 0
   m_NormalDirection: 1
@@ -83835,7 +83835,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 66
+      scalar: 134
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -83889,7 +83889,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 0.285713, b: 0, a: 1}
+      maxColor: {r: 0.03127098, g: 0, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -83950,8 +83950,8 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     startSize:
       serializedVersion: 2
-      minMaxState: 3
-      scalar: 9
+      minMaxState: 0
+      scalar: 4
       minScalar: 8
       maxCurve:
         serializedVersion: 2
@@ -84003,7 +84003,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeY:
       serializedVersion: 2
-      minMaxState: 3
+      minMaxState: 0
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -84056,7 +84056,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeZ:
       serializedVersion: 2
-      minMaxState: 3
+      minMaxState: 0
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -84643,7 +84643,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 1
+        scalar: 5
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -103238,11 +103238,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 971d2371b0c577e4a8a91604cfacfd80, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -32.5
+      value: -24.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 971d2371b0c577e4a8a91604cfacfd80, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 125.600006
+      value: 133.20001
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 971d2371b0c577e4a8a91604cfacfd80, type: 3}
       propertyPath: m_LocalRotation.w
